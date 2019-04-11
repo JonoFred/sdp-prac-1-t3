@@ -10,16 +10,20 @@ namespace Euler
     {
         static void Main(string[] args)
         {
-            int sum = 0;
-            for (int i = 0; i < 1000; i++)
+            int squareOfSum = 0;
+            int sumOfSquare = 0;
+            int difference = 0;
+
+            for (int i = 0; i <= 100; i++)
             {
-                if ((i % 3 == 0) || (i % 5 == 0))
-                {
-                    sum = sum + i;
-                }
+                squareOfSum += i;
+                sumOfSquare += i * i;
             }
 
-            Console.WriteLine(sum);
+            squareOfSum = squareOfSum * squareOfSum;
+            difference = squareOfSum - sumOfSquare;
+            
+            Console.WriteLine(difference);
         }
     }
 }
